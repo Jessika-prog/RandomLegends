@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quelle légende vas-tu jouer?</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <img src="./assets/background.jpg" alt="">
+    <h1>La compo random</h1>
+    <p class="presentation">Bienvenue dans l'interface de choix des légendes.
+        Tu as envie de pimenter un peu les parties en laissant le hasard
+        choisir ta légende? Cet endroit est fait pour ça. Choisis d'abord
+        le nombre de joueurs puis lance la sélection. Si tu ne possèdes
+        pas encore la légende choisie pour toi, tu peux relancer
+        individuellement chaque légendes. A toi le Top 1 aléatoire! GLHF</p>
+
+
+    <label for="modeDeJeu">Sélectionne le mode de jeu:</label>
+    <select name="modeDeJeu" id="modeDeJeu">
+        <option value="1">Juste pour moi</option>
+        <option value="2">Duo</option>
+        <option value="3">Trio</option>
+    </select>
+    <button type="submit" class="submit">choisir</button>
+
+    <div>
+        <div>
+            <h2>La 1ère légende sera:</h2>
+            <button>Relancer la sélection</button>
+        </div>
+        <div>
+            <h2>La 2ème légende sera:</h2>
+            <button>Relancer la sélection</button>
+        </div>
+        <div>
+            <h2>La 3ème légende sera:</h2>
+            <button>Relancer la sélection</button>
+        </div>
+    </div>
+    <button class="lancer">Lancer la sélection</button>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
