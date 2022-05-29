@@ -1,4 +1,10 @@
+@font-face {
+    font-family: "Apex Regular";
+    src: url("../assets/font/Apex Regular.otf") format("otf");
+   }
 body{
+    font-family: "Apex Regular";
+    font-weight: 100;
     margin: 0;
     padding: 0;
     border: none;
@@ -7,11 +13,12 @@ body{
     align-items: center;
     flex-direction: column;
     box-sizing: border-box;
+
 }
 
 .background{
     z-index: -1000;
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     opacity: 0.3;
@@ -32,10 +39,15 @@ body{
         width: 20px;
     }
 }
+h1{
+    color: #b32b32;
+}
 .presentation{
     width: 600px;
     height: 25%;
     text-align: center;
+    line-height: 2;
+    letter-spacing: 01.5px;
 }
 
 .invisible{
