@@ -52,8 +52,8 @@ switch (modeDeJeu.value) {
         do{
             choix2 = getRandomInt(legendes.length)}
             while (choix2 == choix1)
-        legende1.innerText= legendes[choix1];
-        legende2.innerText= legendes[choix2];console.log(legendes[choix1], legendes[choix2]);
+        legende1.setAttribute('src', legendes[choix1][1]);
+        legende2.setAttribute('src', legendes[choix20][1]);
         break;
 
 
@@ -67,9 +67,9 @@ switch (modeDeJeu.value) {
         do{
             choix3 = getRandomInt(legendes.length)}
             while (choix3 == choix1 || choix3 == choix2)
-        legende1.innerText= legendes[choix1];
-        legende2.innerText= legendes[choix2];
-        legende3.innerText= legendes[choix3];
+        legende1.setAttribute('src', legendes[choix1][1]);
+        legende2.setAttribute('src', legendes[choix2][1]);
+        legende3.setAttribute('src', legendes[choix3][1]);
             break;
 
     default:
