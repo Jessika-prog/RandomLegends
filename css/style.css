@@ -20,9 +20,20 @@ body{
     display: flex;
     justify-content: center;
 }
-
+@media screen and (max-width: 700px) {
+    .presentation{
+        width: 600px;
+        height: 25%;
+        text-align: center;
+    }
+  }
+@media screen and (min-width: 699px) {
+    .presentation{
+        width: 20px;
+    }
+}
 .presentation{
-    width: 100%;
+    width: 600px;
     height: 25%;
     text-align: center;
 }
@@ -36,11 +47,10 @@ body{
 }
 
 .legendesCards{
+    width: fit-content;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    width: fit-content;
-
+    justify-content: space-between;
 }
 
 .legCard{

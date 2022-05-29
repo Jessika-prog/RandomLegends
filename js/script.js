@@ -21,7 +21,10 @@ const legendes = [["Bloodhound","./assets/BH.png"],
 ["Newcastle","./assets/NEWC.png"]];
 
 const modeDeJeu = document.querySelector('select');
+
 const button = document.getElementsByClassName('submit');
+const relance = document.getElementsByClassName('relance')
+
 const legende1 = document.getElementById('legende1');
 const legende2 = document.getElementById('legende2');
 const legende3 = document.getElementById('legende3');
@@ -29,23 +32,34 @@ const legende3 = document.getElementById('legende3');
 const div2 = document.getElementById('div2');
 const div3 = document.getElementById('div3');
 
+let choix1, choix2, choix3;
+
+
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);;
   }
 
-let choix1, choix2, choix3;
+
 button[0].addEventListener('click', e => {
 
 switch (modeDeJeu.value) {
 
     case '1':
+        div1.setAttribute('class', 'legCard visible');
         div2.setAttribute('class', 'legCard invisible');
         div3.setAttribute('class', 'legCard invisible');
         choix1 = getRandomInt(legendes.length)
         legende1.setAttribute('src', legendes[choix1][1]);
+
+        relance[0].addEventListener('click',e =>{
+            choix1 = getRandomInt(legendes.length)
+            legende1.setAttribute('src', legendes[choix1][1]);
+
+        })
         break;
 
     case '2':
+        div1.setAttribute('class', 'legCard');
         div2.setAttribute('class', 'legCard visible');
         div3.setAttribute('class', 'legCard invisible');
         choix1 = getRandomInt(legendes.length)
@@ -53,11 +67,23 @@ switch (modeDeJeu.value) {
             choix2 = getRandomInt(legendes.length)}
             while (choix2 == choix1)
         legende1.setAttribute('src', legendes[choix1][1]);
-        legende2.setAttribute('src', legendes[choix20][1]);
+        legende2.setAttribute('src', legendes[choix2][1]);
+
+        relance[0].addEventListener('click',e =>{
+            choix1 = getRandomInt(legendes.length)
+            legende1.setAttribute('src', legendes[choix1][1]);
+
+        })
+        relance[1].addEventListener('click',e =>{
+            choix2 = getRandomInt(legendes.length)
+            legende2.setAttribute('src', legendes[choix2][1]);
+
+        })
         break;
 
 
     case '3':
+        div1.setAttribute('class', 'legCard visible');
         div2.setAttribute('class', 'legCard visible');
         div3.setAttribute('class', 'legCard visible');
         choix1 = getRandomInt(legendes.length)
@@ -70,6 +96,22 @@ switch (modeDeJeu.value) {
         legende1.setAttribute('src', legendes[choix1][1]);
         legende2.setAttribute('src', legendes[choix2][1]);
         legende3.setAttribute('src', legendes[choix3][1]);
+
+        relance[0].addEventListener('click',e =>{
+            choix1 = getRandomInt(legendes.length)
+            legende1.setAttribute('src', legendes[choix1][1]);
+
+        })       
+        relance[1].addEventListener('click',e =>{
+            choix2 = getRandomInt(legendes.length)
+            legende2.setAttribute('src', legendes[choix2][1]);
+
+        })        
+        relance[2].addEventListener('click',e =>{
+            choix3 = getRandomInt(legendes.length)
+            legende3.setAttribute('src', legendes[choix3][1]);
+
+        })
             break;
 
     default:
